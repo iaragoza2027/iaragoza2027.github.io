@@ -69,6 +69,11 @@ footer {
     background-color: #008CBA;
   }
 /*site specific tags*/
+.index-news {
+    border: 3px solid #5A0E0B;
+    border-radius: 10px;
+    text-align: center;
+} 
 .about-redirect {
     border: 10px solid #5A0E0B;
     border-radius: 20px;
@@ -106,7 +111,7 @@ footer {
     margin-left: 15px;
 }
 /*class specific tag styles*/
-.section-box h3, h4, h5 {
+.section-box h1, h2, h3, h4, h5 {
     font-family: 'Hedvig Letters Serif', serif;
     text-align: center;
 }
@@ -127,6 +132,9 @@ footer {
 /*specific id styles*/
 #logo {
     width: 100px;
+}
+#promo-video {
+    border-radius: 15px;
 }
 /*biology lab styles*/
 #biology-section {
