@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FCF3EC;
+    font-family: 'Inter', sans-serif;
+    color: #5A0E0B;
+}
+/*general tag styles*/
+a {
+    text-decoration: none;
+    color: inherit'
+}
+header{
+    background: #5A0E0B;
+    color: white;
+}
+header h1 {
+    font-size: 150%;
+    color: white;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+nav {
+    background-color: #D8AC5B;
+}
+footer {
+    position: sticky;
+    background: #5A0E0B;
+}
+/*general class styles*/
+.all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.nav-link {
+    color: rgb(90, 0, 0);
+}
+.container-fluid {
+    padding: 0px;
+}
+.section-box {
+    background-color: #D8AC5B;
+    border: 7px solid #FCF3EC;
+    border-radius: 30px;
+}
+.icon {
+    width: 120px;
+    height: 120px;
+}
+.text-wrapper {
+    display: flex;
+    align-items: center;
+}
+.contacts-content {
+    margin-left: 15px;
+}
+.banner {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+/*site specific tags*/
+.about-redirect {
+    border: 10px solid #5A0E0B;
+    border-radius: 20px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.acads-redirect {
+    border: 7px solid #FCF3EC;
+    border-radius: 50px;
+}
+.extracurriculars-images {
+    width: 240px;
+    height: 240px;
+}
+.extracurriculars-eventdescription {
+    margin: 15px;
+    margin-top: 0;
+}
+/*class specific tag styles*/
+.section-box h3, h4 {
+    font-family: 'Hedvig Letters Serif', serif;
+    text-align: center;
+}
+.about-redirect h3 {
+    text-align: center;
+    font-family: 'Hedvig Letters Serif', serif;
+    color: #5A0E0B;
+}
+.section-box .img-thumbnail {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+/*specific id styles*/
+#logo {
+    width: 100px;
+}
+/*biology lab styles*/
+#biology-section {
+    background-color: #cccbc4;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+}
+#biology-section h3 {
+    font-family: 'Caprasimo', serif;
+    color: #a2a19a;
+}
+.stage-header {
+    background-color: #f4f4ee;
+    border: 7px solid #cccbc4;
+    border-radius: 30px;
+}
+.stage-content {
+    background-color: #a2a19a;
+    border: 7px solid #cccbc4;
+    border-radius: 15px;
+}
+@media (min-width: 1200px) {
+    
+}
