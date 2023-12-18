@@ -35,7 +35,7 @@
             </ul>
         </div>
     </nav>
-    <section>
+    <section class="row justify-content-center">
         <!-- 
             The homepage is expected to have attractive promotional content that welcomes the user to explore
             the school’s website. The page may build on your AA1 output. This should contain the short video
@@ -46,13 +46,13 @@
         <div id="index-carousel" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/index-banner1.jpg" alt="" class="img-fluid banner">
+                    <img src="images/index/index-banner1.jpg" alt="" class="img-fluid banner">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/index-banner2.jpg" alt="" class="img-fluid banner">
+                    <img src="images/index/index-banner2.jpg" alt="" class="img-fluid banner">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/index-banner3.jpg" alt="" class="img-fluid banner">
+                    <img src="images/index/index-banner3.jpg" alt="" class="img-fluid banner">
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#index-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -62,18 +62,38 @@
                 </button>
             </div>
         </div>
+        <div class="col-sm-3 p-3 section-box" style="margin-top: -45px; z-index: 1;"> 
+            <h1>ENROLL NOW!</h1 >
+        </div>
         <div class="row m-2 p-5">
             <div class="col-sm-4 p-4">
                 <h3> Latest News </h3>
                 <hr>
-                <ul>
-                    <li> No news are available at the moment.</li>
-                </ul>
+                <div class="row p-3 gy-3">
+                    <div class="col-sm-12 p-2 index-news">
+                        <img src="images/index/news-thumb1.png" class="img-thumbnail">
+                        <div class="extracurriculars-eventdescription">
+                            <hr>
+                            <p>
+                                An Alumni visits NSHSP and shares his experience in studying here
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 p-2 index-news">
+                        <img src="images/index/news-thumb2.png" class="img-thumbnail">
+                        <div class="extracurriculars-eventdescription">
+                            <hr>
+                            <p>
+                                Senior high school students are currently holding a fundraising event located at NSHSP Field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-8">
                 <div class="row">
                     <div class="col-sm-12">
-                        <video src="images/index-video.mp4" controls width="100%"></video>
+                        <video src="images/index-video.mp4" controls width="100%" id="promo-video">
                     </div>
                     <div class="col-sm-6 p-4 section-box">
                         <h3> Mission </h3>
