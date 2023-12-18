@@ -51,9 +51,6 @@ footer {
     display: flex;
     align-items: center;
 }
-.contacts-content {
-    margin-left: 15px;
-}
 .banner {
     height: 400px;
     width: 100%;
@@ -80,6 +77,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+} 
+.about-portrait {
+    width: 50%;
+}
+.about-content {
+    margin-left: 25px;
 }
 .acads-redirect {
     background-color: #D8AC5B;
@@ -98,6 +101,9 @@ footer {
 .extracurriculars-eventdescription {
     margin: 15px;
     margin-top: 0;
+}
+.contacts-content {
+    margin-left: 15px;
 }
 /*class specific tag styles*/
 .section-box h3, h4, h5 {
