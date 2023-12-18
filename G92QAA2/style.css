@@ -8,7 +8,7 @@ body {
 /*general tag styles*/
 a {
     text-decoration: none;
-    color: inherit'
+    color: inherit;
 }
 header{
     background: #5A0E0B;
@@ -82,8 +82,14 @@ footer {
     justify-content: center;
 }
 .acads-redirect {
-    border: 7px solid #FCF3EC;
-    border-radius: 50px;
+    background-color: #D8AC5B;
+    color: #5A0E0B;
+    border-radius: 30px;
+    width: 100%;
+}
+.acads-thumbnail {
+    border-radius: 45px;
+    width: 100%;
 }
 .extracurriculars-images {
     width: 240px;
@@ -94,11 +100,16 @@ footer {
     margin-top: 0;
 }
 /*class specific tag styles*/
-.section-box h3, h4 {
+.section-box h3, h4, h5 {
     font-family: 'Hedvig Letters Serif', serif;
     text-align: center;
 }
 .about-redirect h3 {
+    text-align: center;
+    font-family: 'Hedvig Letters Serif', serif;
+    color: #5A0E0B;
+}
+.acads-redirect h3, h5 {
     text-align: center;
     font-family: 'Hedvig Letters Serif', serif;
     color: #5A0E0B;
