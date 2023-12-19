@@ -137,6 +137,13 @@ footer {
     border-radius: 15px;
 }
 /*biology lab styles*/
+#biology-header {
+    background: #a2a19a;
+    color: white;
+    font-family: 'Caprasimo', serif;
+    position: sticky;
+    top: 0;
+}
 #biology-section {
     background-color: #cccbc4;
     color: black;
@@ -155,6 +162,11 @@ footer {
     background-color: #a2a19a;
     border: 7px solid #cccbc4;
     border-radius: 15px;
+}
+.stage-video {
+    width: 100%;
+    border: 5px solid white;
+    border-radius: 5px;
 }
 @media (min-width: 1200px) {
     
