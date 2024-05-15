@@ -15,14 +15,14 @@ var testItem0 = {
     name: 'puyo puyo',
     description: 'puyo puyo',
     price: 2000,
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.myfigurecollection.net%2Fupload%2Fitems%2F1%2F1274232-1a889.jpg&f=1&nofb=1&ipt=a279c96ee299d263ee63ffc2ed7ddfa557be8a9372704dd5af40d59be9cdd683&ipo=images',
+    image: 'https://static.myfigurecollection.net/upload/items/1/1274232-1a889.jpg'
 }
 categoryTest.push(testItem0);
 var testItem1 = {
     name: 'puyo puyo puyo',
     description: 'puyo puyo',
     price: 2000,
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2F64QAAOSwQXRjt7Oz%2Fs-l1600.jpg&f=1&nofb=1&ipt=c3a809d1341cc8b7d0858b6da5377ceabcefbb814a2fc345ce7ebcb9b8c24d54&ipo=images',
+    image: 'https://static.myfigurecollection.net/upload/items/1/1274233-c3d47.jpg'
 }
 categoryTest.push(testItem1);
 
