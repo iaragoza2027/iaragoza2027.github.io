@@ -1,8 +1,14 @@
+// initial variables //
 var shopCatalogue=[];
 var cartList=[];
 cartList.push(null); // total
 
 // list of catalogue items //
+var generalCatalogueList = [];
+// category 1
+generalCatalogueList.push([]);
+
+// test category
 var categoryTest = [];
 categoryTest.push('categoryTest')
 var testItem0 = {
@@ -19,12 +25,19 @@ var testItem1 = {
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2F64QAAOSwQXRjt7Oz%2Fs-l1600.jpg&f=1&nofb=1&ipt=c3a809d1341cc8b7d0858b6da5377ceabcefbb814a2fc345ce7ebcb9b8c24d54&ipo=images',
 }
 categoryTest.push(testItem1);
+
 // functions //
 // catalogue functions
 function generateCatalogue(category){
     document.getElementById('catalogue-list').innerHTML = ''; 
     for (var count=1; count<category.length; count++){
         addToCatalogue(category[count], count, category[0]);
+    }
+}
+function generateGeneralCatalogue(){
+    document.getElementById('catalogue-list').innerHTML = '';
+    for (var count=0; count<generalCatalogueList.length; count++){
+        generateCatalogue(generalCatalogueList[count]);
     }
 }
 function addToCatalogue(item, id, category){
@@ -76,7 +89,9 @@ function parseLocalCart(){
         cartList = local_cartList;
     }
 }
-// commands at start
-generateCatalogue(categoryTest);
+
+// commands at start //
+generateCatalogue(categoryTest); // in the final site, this would be generateGeneralCatalogue() to load all categories
 parseLocalCart();
 generateCart();
+document.getElementById('categAll').checked = true;

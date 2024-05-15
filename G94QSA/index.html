@@ -52,19 +52,19 @@
                     <h4 class="mb-4">Item Catalogue</h4>
                     <div> <!-- category picker -->
                         <input type="radio" class="btn-check" id="categAll" name="categCheck" checked>
-                        <label for="categAll" class="btn btn-outline-secondary">All</label>
+                        <label onclick="generateGeneralCatalogue()" for="categAll" class="btn btn-outline-secondary">All</label>
 
                         <input type="radio" class="btn-check" id="categ0" name="categCheck">
-                        <label for="categ0" class="btn btn-outline-secondary">Category 1</label>
+                        <label onclick="generateCatalogue(generalCatalogueList[0])" for="categ0" class="btn btn-outline-secondary">Category 1</label>
 
                         <input type="radio" class="btn-check" id="categ1" name="categCheck">
-                        <label for="categ1" class="btn btn-outline-secondary">Category 2</label>
+                        <label onclick="generateCatalogue(generalCatalogueList[1])" for="categ1" class="btn btn-outline-secondary">Category 2</label>
 
                         <input type="radio" class="btn-check" id="categ2" name="categCheck">
-                        <label for="categ2" class="btn btn-outline-secondary">Category 3</label>
+                        <label onclick="generateCatalogue(generalCatalogueList[2])" for="categ2" class="btn btn-outline-secondary">Category 3</label>
 
                         <input type="radio" class="btn-check" id="categ3" name="categCheck">
-                        <label for="categ3" class="btn btn-outline-secondary">Category 4</label>
+                        <label onclick="generateCatalogue(generalCatalogueList[3])" for="categ3" class="btn btn-outline-secondary">Category 4</label>
                     </div>
                     <div class="container mt-4"> <!-- catalogue list-->
                         <div class="row g-3" id="catalogue-list">
