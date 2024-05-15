@@ -69,10 +69,10 @@ function generateCart(){
     saveCartToLocal();
 }
 function addToCart(item, id){
-    document.getElementById('shopping-cart').innerHTML += '<li class="list-group-item cart-item"  id="cart' + id + '"> <span class="mt-2" style="font-weight: bold;">' + item.name + '</span> <br> <span class="mb-2">₱' + item.price + '</span> <span class="mb-2" onclick="removeFromCart(cart' + id + ')" style="color: firebrick; cursor: pointer;">Remove</span> </li>'
+    document.getElementById('shopping-cart').innerHTML += '<li class="list-group-item cart-item"  id="cart' + id + '"> <span class="mt-2" style="font-weight: bold;">' + item.name + '</span> <br> <span class="mb-2">₱' + item.price + '</span> <span class="mb-2" onclick="removeFromCart(&apos;' + id + '&apos;)" style="color: firebrick; cursor: pointer;">Remove</span> </li>'
 }
-function removeFromCart(cartID){
-    cartList.splice(cartID,1)
+function removeFromCart(id){
+    cartList.splice(id,1);
     generateCart();
 }
 function checkOut(){
