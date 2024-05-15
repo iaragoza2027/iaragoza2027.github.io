@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>BUY BUY BUY BUY !!!!!!</title>
+    <!-- bootstrap style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- custom styles-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="index">
+    <nav class="navbar"> <!-- page navigation bar-->
+        <div class="container">
+            <a href="" class="navbar-brand">Shopada</a>
+            <ul class="nav nav-pills me-auto p-3">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid"></div>
+    <div class="container"> <!-- page body -->
+    <div class="row g-4">
+        <div class="col-sm-3 sticky-top-md order-sm-2"> <!-- shopping cart section -->
+            <div class="card">
+                <div class="card-body p-4">
+                    <h4 class="mb-4 word-wrap">Shopping Cart</h4>
+                    <div class="card mb-3"> <!-- cart list -->
+                        <ul id="shopping-cart" class="list-group list-group-flush">
+                            <li class="list-group-item cart-item">
+                                <span class="mt-2 gray-out" style="font-weight: bold;">Shopping item goes here.</span>
+                                <br>
+                                <span class="mb-2 gray-out">Price goes here.</span>
+                                <span class="mb-2 gray-out">Remove</span>
+                            </li>
+                        </ul>
+                        <div id="cart-total" class="card-footer">
+                            <h6 class="mt-2">Total: </h6>
+                        </div>
+                    </div>
+                    
+                    
+                    <button onclick="checkOut()" class="btn btn-success">Check Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-lg-pull-9 order-sm-1"> <!-- item catalogue -->
+            <div class="-card">
+                <div class="-card-body p-4">
+                    <h4 class="mb-4">Item Catalogue</h4>
+                    <div> <!-- category picker -->
+                        <input type="radio" class="btn-check" id="categAll" name="categCheck" checked>
+                        <label for="categAll" class="btn btn-outline-secondary">All</label>
+
+                        <input type="radio" class="btn-check" id="categ0" name="categCheck">
+                        <label for="categ0" class="btn btn-outline-secondary">Category 1</label>
+
+                        <input type="radio" class="btn-check" id="categ1" name="categCheck">
+                        <label for="categ1" class="btn btn-outline-secondary">Category 2</label>
+
+                        <input type="radio" class="btn-check" id="categ2" name="categCheck">
+                        <label for="categ2" class="btn btn-outline-secondary">Category 3</label>
+
+                        <input type="radio" class="btn-check" id="categ3" name="categCheck">
+                        <label for="categ3" class="btn btn-outline-secondary">Category 4</label>
+                    </div>
+                    <div class="container mt-4"> <!-- catalogue list-->
+                        <div class="row g-3" id="catalogue-list">
+                            <div class="col-lg-3 col-sm-6"> <!-- shopping item -->
+                            <div class="card catalogue-item">
+                                <div class="card-body px-3 mx-0">
+                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.myfigurecollection.net%2Fupload%2Fitems%2F1%2F1274232-1a889.jpg&f=1&nofb=1&ipt=a279c96ee299d263ee63ffc2ed7ddfa557be8a9372704dd5af40d59be9cdd683&ipo=images" alt="" class="card-img-top">
+                                    <h5 class="card-title mb-3">puyo puyo puyo</h5>
+                                    <h6 class="card-subtitle text-secondary text-truncate mb-3" title="diacute! diacute! diacute! diacute! diacute! diacute! diacute! diacute! diacute! diacute!">diacute! diacute! diacute! diacute! diacute! diacute! diacute! diacute! diacute! diacute!</h6>
+                                    <h6 class="card-text mb-3">₱2,000.00</h6>
+                                    <button class="btn btn-primary">Add to cart</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
