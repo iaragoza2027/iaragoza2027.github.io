@@ -20,42 +20,65 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-    <div class="row">
-        <div class="col-sm-9 mb-4"> <!-- shopping cart -->
-            <div class="card">
-                <div class="card-body p-4">
-                    <h3 class="mb-4">Shopping Cart</h3> <!-- note: i'd recommend you use parseLocalCart() and generateCart() from script.js -->
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item">&nbsp;</li>
-                        <li class="list-group-item">&nbsp;</li>
-                        <li class="list-group-item">&nbsp;</li>
-                    </ul>
-                    <h5>Total:</h5>
+    <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="get">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-9 mb-4"> <!-- shopping cart -->
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Shopping Cart</h3> <!-- note: i'd recommend you use parseLocalCart() and generateCart() from script.js -->
+                        <div class="card mb-3"> <!-- cart list -->
+                            <ul id="shopping-cart" class="list-group list-group-flush">
+                                <li class="list-group-item cart-item">
+                                    <span class="mt-2 gray-out" style="font-weight: bold;">Shopping item goes here.</span>
+                                    <br>
+                                    <span class="mb-2 gray-out">Price goes here.</span>
+                                    <span class="mb-2 gray-out">Remove</span>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div>
+                            <h5 id="cart-total" class="mt-2">Total: </h5>
+                        </div>
+                        <input name="cust_order" type="text" id="cart-input">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-9"> <!-- order form -->
-            <div class="card">
-                <div class="card-body p-4">
-                    <h3 class="mb-4">Place Order</h3> <!-- note: none of the input names have been changed yet to follow the instructions on GClassroom -->
-                    <!-- name input -->
-                    <label for="nameInp" class="form-label">Name</label>
-                    <input type="text" class="form-control mb-2" id="nameInp" placeholder="Dela Cruz, Juan M.I.">
-                    <!-- email input -->
-                    <label for="emailInp" class="form-label">Email</label>
-                    <input type="text" class="form-control mb-2" id="emailInp" placeholder="juandelacruz@example.com">
-                    <!-- address input -->
-                    <label for="addressInp" class="form-label">Address</label>
-                    <input type="text" class="form-control mb-3" id="addressInp" placeholder="Providence Tower 3000, Unit 2112, Leon Guinto St., Malate, Manila">
-                    <!-- / address input-->
-                    <button class="btn btn-primary">Place Order</button>
+            <div class="col-sm-9"> <!-- order form -->
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Place Order</h3> <!-- note: none of the input names have been changed yet to follow the instructions on GClassroom -->
+                        <!-- name input -->
+                        <label for="nameInp" class="form-label">Name</label>
+                        <input name="cust_name" type="text" class="form-control mb-2" id="nameInp" placeholder="Dela Cruz, Juan M.I.">
+                        <!-- email input -->
+                        <label for="emailInp" class="form-label">Email</label>
+                        <input name="cust_email" type="text" class="form-control mb-2" id="emailInp" placeholder="juandelacruz@example.com">
+                        <!-- address input -->
+                        <label for="addressInp" class="form-label">Address</label>
+                        <input name="cust_addr" type="text" class="form-control mb-3" id="addressInp" placeholder="Providence Tower 3000, Unit 2112, Leon Guinto St., Malate, Manila">
+                        <!-- / address input-->
+                        <button class="btn btn-primary">Place Order</button>
+                    </div>
                 </div>
             </div>
+            <!-- my guess as to how you'd send cartList to the receiving site is by putting it in an invisible input tag? -->
         </div>
-        <!-- my guess as to how you'd send cartList to the receiving site is by putting it in an invisible input tag? -->
-    </div>
-    </div>
+        </div>
+    </form>
+    
     <script src="script.js"></script>
+    <script>
+        // functions on startup //
+        generateCart();
+        inputCart();
+        function removeFromCartList(id){
+            cartList.splice(id,1);
+            saveCartToLocal();
+            generateCart();
+            inputCart();
+        }
+    </script>
 </body>
 </html>

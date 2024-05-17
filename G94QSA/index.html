@@ -36,12 +36,10 @@
                                 <span class="mb-2 gray-out">Remove</span>
                             </li>
                         </ul>
-                        <div id="cart-total" class="card-footer">
-                            <h6 class="mt-2">Total: </h6>
+                        <div class="card-footer">
+                            <h6 id="cart-total" class="mt-2">Total: </h6>
                         </div>
                     </div>
-                    
-                    
                     <button onclick="checkOut()" class="btn btn-success">Check Out</button>
                 </div>
             </div>
@@ -87,5 +85,11 @@
     </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // functions on startup //
+        generateCatalogue(categoryTest); // in the final site, this would be generateGeneralCatalogue() to load all categories
+        generateCart();
+        document.getElementById('categAll').checked = true;
+    </script>
 </body>
 </html>
