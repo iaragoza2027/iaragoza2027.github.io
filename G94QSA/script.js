@@ -7,24 +7,53 @@ cartList.push(null); // total
 var generalCatalogueList = [];
 // category 1
 generalCatalogueList.push([]);
-
 // test category
 var categoryTest = [];
 categoryTest.push('categoryTest')
-var testItem0 = {
-    name: 'puyo puyo',
-    description: 'puyo puyo',
-    price: 2000.00,
-    image: 'https://static.myfigurecollection.net/upload/items/1/1274232-1a889.jpg'
+function pushToCategoryTest(){
+    var testItem0 = {
+        name: 'bayoen!',
+        description: 'puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo',
+        price: 2000.00,
+        image: 'https://static.myfigurecollection.net/upload/items/1/1274232-1a889.jpg'
+    }
+    categoryTest.push(testItem0);
+    var testItem1 = {
+        name: 'melody scale!',
+        description: 'puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo',
+        price: 2000.00,
+        image: 'https://static.myfigurecollection.net/upload/items/1/1274231-bc0de.jpg'
+    }
+    categoryTest.push(testItem1);
+    var testItem2 = {
+        name: 'catastrophe!',
+        description: 'puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo',
+        price: 2000.00,
+        image: 'https://static.myfigurecollection.net/upload/items/1/1274233-c3d47.jpg'
+    }
+    categoryTest.push(testItem2);
+    var testItem3 = {
+        name: 'i want you!',
+        description: 'puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo',
+        price: 2000.00,
+        image: 'https://static.myfigurecollection.net/upload/items/1/1274236-a8359.jpg'
+    }
+    categoryTest.push(testItem3);
+    var testItem4 = {
+        name: 'ugh...',
+        description: 'puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo',
+        price: 2000.00,
+        image: 'https://static.myfigurecollection.net/upload/items/1/1274234-a0409.jpg'
+    }
+    categoryTest.push(testItem4);
+    var testItem5 = {
+        name: 'creme double!',
+        description: 'puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo puyo',
+        price: 2000.00,
+        image: 'https://static.myfigurecollection.net/upload/items/1/1274235-79413.jpg'
+    }
+    categoryTest.push(testItem5);
 }
-categoryTest.push(testItem0);
-var testItem1 = {
-    name: 'puyo puyo puyo',
-    description: 'puyo puyo',
-    price: 2000.00,
-    image: 'https://static.myfigurecollection.net/upload/items/1/1274233-c3d47.jpg'
-}
-categoryTest.push(testItem1);
 
 // functions //
 // catalogue functions
@@ -97,3 +126,6 @@ function parseLocalCart(){
         cartList = local_cartList;
     }
 }
+
+// functions on startup //
+pushToCategoryTest();
