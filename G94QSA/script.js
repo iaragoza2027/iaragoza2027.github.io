@@ -82,7 +82,8 @@ function checkOut(){
 }
 function inputCart(){
     parseLocalCart()
-    document.getElementById('cart-input').value=JSON.stringify(cartList);
+    var inputCartList = cartList.shift();
+    document.getElementById('cart-input').value=JSON.stringify(inputCartList);
 }
 // local storage functions
 function saveCartToLocal(){
