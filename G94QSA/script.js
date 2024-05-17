@@ -60,7 +60,7 @@ function generateCart(){
         cartList[0] = 0;
         for (var count=1; count<cartList.length; count++){
             var cartItem = cartList[count];
-            cartList[0] += cartList[count].price;
+            cartList[0] += cartList[count].prod_price;
             addToCart(cartItem, count);
         }
         document.getElementById('cart-total').innerHTML = 'Total: ₱'+cartList[0];
@@ -70,7 +70,7 @@ function generateCart(){
     }
 }
 function addToCart(item, id){
-    document.getElementById('shopping-cart').innerHTML += '<li class="list-group-item cart-item"  id="cart' + id + '"> <span class="mt-2" style="font-weight: bold;">' + item.name + '</span> <br> <span class="mb-2">₱' + item.price + '</span> <span class="mb-2" onclick="removeFromCartList(&apos;' + id + '&apos;)" style="color: firebrick; cursor: pointer;">Remove</span> </li>'
+    document.getElementById('shopping-cart').innerHTML += '<li class="list-group-item cart-item"  id="cart' + id + '"> <span class="mt-2" style="font-weight: bold;">' + item.prod_name + '</span> <br> <span class="mb-2">₱' + item.prod_price + '</span> <span class="mb-2" onclick="removeFromCartList(&apos;' + id + '&apos;)" style="color: firebrick; cursor: pointer;">Remove</span> </li>'
 }
 function removeFromCartList(id){
     cartList.splice(id,1);
