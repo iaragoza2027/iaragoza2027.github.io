@@ -1,4 +1,4 @@
-// *I am so sorry to whoever has to read and understand this code. It's so confusing, and I'm surprised that I'm still able to make changes to this script file.
+// *I am so sorry to whoever has to read and understand this code. It's so confusing, I'm surprised that I'm still able to make changes to this script file.
 
 // initial variables //
 var shopCatalogue=[];
@@ -54,25 +54,7 @@ var test = [
 ];
 
 // functions //
-// catalogue functions
-function generateCatalogue(category){ // *this function is an absolute mess of a loop croissant, but it works, right? ahahahahahahaha (ノ￣□￣)ノ ~┻━┻
-    document.getElementById('catalogue').innerHTML = ''; 
-    if (category == 'all'){
-        for (var categCount=0; categCount<catalogue.length; categCount++){
-            subCategory = catalogue[categCount];
-            for (var genCount=1; genCount<subCategory.length; genCount++){
-                addToCatalogue(subCategory[genCount], genCount, subCategory[0]);
-            }
-        }
-    } else{
-        for (var genCount=1; genCount<category.length; genCount++){
-            addToCatalogue(category[genCount], genCount, category[0]);
-        }
-    }
-}
-function addToCatalogue(item, id, category){
-    document.getElementById('catalogue').innerHTML += '<div class="col-lg-4 col-sm-6"> <div class="card catalogue-item float"> <img src="'+item.image+'" alt="" class="card-img-top"> <div class="card-body px-3 mx-0"> <h5 class="card-title mb-3">'+item.name+'</h5> <h6 class="card-subtitle text-secondary text-truncate mb-3" title="'+item.description+'">'+item.description+'</h6> <h6 class="card-text mb-3">₱'+item.price+ '</h6> <button class="btn btn-primary" onclick="pushToCartList('+category+','+id+')">Add to cart</button> </div> </div> </div>';
-}
+
 // cart functions
 function pushToCartList(category, id){
     var cartItem = {

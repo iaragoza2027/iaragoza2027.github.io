@@ -1,38 +1,56 @@
-/* This is an external css file! If you make changes here, it changes any site that uses this stylesheet!! */
+/* this css file is as disorganized as i am haahahahahhahahahahahahhahhahahaha */
+
+/* Design */
 body {
     font-family: "Poppins", sans-serif;
     background:#f8f4e3;
     color: #5a4635;
 }
-footer{
+.btn-primary, .btn-danger, .btn-success {
     background-color: #5a4635;
-    height: 10vh;
+    border-color: #5a4635;
 }
-.cart-item{
-    display: inline-block;
+.card{
+    border-radius: 20px;
 }
-.sticky-top{
-    top: 4vh;
+.card-img-top{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.card li{
+    border-radius: 20px;
+}
+#main-content{
+    height: 90vh;
 }
 
+/* Navigation bar */
+.navbar-brand, .nav-link {
+    font-family:"DM Serif Display", serif;
+    font-weight: bold;
+    color: #f8f4e3;
+}
 .navbar{
     background-color: #5a4635;
     height: 10vh;
 }
-.active{
-    background-color: #5a4635;
-}
-.navbar-brand, .nav-link {
+.nav-link {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: #f8f4e3;
+}.navbar-brand{
+    font-family: "Poppins", sans-serif !important;
+    font-weight: bold;
+    color: #f8f4e3;
+    letter-spacing: 0.25vw;
 }
 .navbar-brand:hover, .nav-link:hover {
     color: #ffffff;
 }
-.active{
-    color: #aba89c !important;
-}
+
+/* Float Effect */
 .float{
     transition: transform 0.2s;
 }
@@ -60,38 +78,19 @@ footer{
         transform: translateY(0);
     }
 }
-/* Navigation bar */
-.navbar-brand, .nav-link {
-    font-family:"DM Serif Display", serif;
-    font-weight: bold;
-    color: #f8f4e3;
+
+/* Random custom styles */
+.cart-item{
+    display: inline-block;
+}
+.sticky-top{
+    top: 4vh;
+}
+.active{
+    color: #aba89c !important;
+    background-color: #5a4635
 }
 
-/* Design */
-.btn-primary, .btn-danger, .btn-success {
-    background-color: #5a4635;
-    border-color: #5a4635;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-.btn-primary, .btn-danger, .btn-success {
-    background-color: #5a4635;
-    border-color: #5a4635;
-}
-.card{
-    border-radius: 20px;
-}
-.card-img-top{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.card li{
-    border-radius: 20px;
-}
-#main-content{
-    height: 90vh;
-}
 /* Shop only */
 h4, h3{
     font-family:"DM Serif Display", serif;
@@ -124,4 +123,3 @@ input[type="radio"]:checked+label{
 input[type="text"]{
     background-color: #fffde9;
 }
-/* Greeting */

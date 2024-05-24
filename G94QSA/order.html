@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Check Out - Elite Kicks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- bootstrap style -->
@@ -22,7 +22,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Elite Kicks</a>
+            <a class="navbar-brand" href="index.html">ELITE KICKS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,7 +50,7 @@
                 <div class="col-lg-9 mb-4">
                     <div class="card">
                         <div class="card-body p-4">
-                            <h4 class="mb-4">Shopping Cart</h1>
+                            <h4 class="mb-4">Shopping Cart</h4>
                             <div class="card mb-3"> <!-- cart list -->
                                 <ul id="shopping-cart" class="list-group list-group-flush">
                                     <li class="list-group-item cart-item">
@@ -82,7 +82,7 @@
                             <label for="addressInp" class="form-label">Address</label>
                             <input name="cust_addr" type="text" class="form-control mb-3" id="addressInp" placeholder="Providence Tower 3000, Unit 2112, Leon Guinto St., Malate, Manila">
                             <!-- / address input-->
-                            <button class="btn btn-primary">Place Order</button>
+                            <button class="btn btn-success">Place Order</button>
                         </div>
                     </div>
                 </div>
@@ -102,6 +102,26 @@
             saveCartToLocal();
             generateCart();
             inputCart();
+        }
+        // bwaaa //
+        function generateCart(){
+            parseLocalCart();
+            if (cartList.length>1){
+                document.getElementById('shopping-cart').innerHTML = '';
+                cartList[0] = 0;
+                for (var count=1; count<cartList.length; count++){
+                    var cartItem = cartList[count];
+                    cartList[0] += cartList[count].prod_price;
+                    addToCart(cartItem, count);
+                }
+                document.getElementById('cart-total').innerHTML = 'Total: ₱'+cartList[0];
+            } else if(cartList.length==1){
+                document.getElementById('shopping-cart').innerHTML = '<ul id="shopping-cart" class="list-group list-group-flush"> <li class="list-group-item cart-item"  style="border-radius:20px;"> <span class="mt-2 gray-out" style="font-weight: bold;">Shopping item goes here.</span> <br> <span class="mb-2 gray-out">Price goes here.</span>';
+                document.getElementById('cart-total').innerHTML = '<h6 class="mt-2">Total: </h6>'
+            }
+        }
+        function addToCart(item, id){
+            document.getElementById('shopping-cart').innerHTML += '<li class="list-group-item cart-item"  id="cart' + id + '" style="border-radius:20px;"> <span class="mt-2" style="font-weight: bold;">' + item.prod_name + '</span> <br> <span class="mb-2">₱' + item.prod_price + '</span> </li>'
         }
     </script>
 </body>
