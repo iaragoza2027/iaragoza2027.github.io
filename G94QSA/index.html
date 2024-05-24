@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Greeting */
+        #main-content{
+            background-attachment: fixed;
+            background-image: url(media/banner.jpg);
+            background-position: center;
+            background-size: 100%;
+        }
         #greeting{
             background-color: #f8f4e3;
             z-index: 1;
             height: 70vh;
             border-radius: 50px;
-        }
-        #greeting-img{
-            width: 100%;
-            min-height: 80vh;
-            object-fit: cover;
-            z-index: 0;
         }
         #greeting h1{
             font-size: 3.5rem;
@@ -63,7 +63,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body id="index" style="background-color: #928477;">
+<body id="index">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -88,18 +88,18 @@
     </nav>
 
     <!-- Main Content -->
-    <div id="main-content" class="fixed-bottom overflow-auto" style="background-color: #f8f4e3; border-radius: 20px;">
+    <div id="main-content" class="fixed-bottom overflow-auto"">
         <!-- Greetings -->
-        <img src="media/banner.jpg" alt="Welcome Image" id="greeting-img" class="img-fluid">
+        <div class="" style="min-height: 80vh">&nbsp;</div>
         <div id="greeting" class="container-fluid">
             <div class="row align-items-center justify-content-center g-9">
-                <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center mt-lg-5 mx-2 p-4">
+                <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center mt-lg-5 mx-5 p-4">
                     <h1 class="mb-">Welcome to Elite Kicks!</h1>
                     <h2 class="lead mb-4">Your one-stop shop for the latest and greatest in athletic footwear.</h2>
                     <p class="mb-4">At Elite Kicks, we believe that the right pair of shoes can make all the difference. Whether you're looking to enhance your performance, make a fashion statement, or simply stay comfortable, we have the perfect pair for you. Explore our wide range of products from top brands like Nike, Adidas, Puma, and New Balance. Each pair is carefully selected to ensure quality, style, and comfort.</p>
                     <a href="shop.html" class="btn btn-primary btn-lg p-4">Explore Products</a>
                 </div>
-                <div class="col-lg-5 mx-2">
+                <div class="col-lg-5 mx-5">
                     <div id="greeting-carousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
